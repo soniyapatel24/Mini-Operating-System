@@ -1,1 +1,1 @@
-# Mini-Operating-System
+This project has been created by Soniya, Bhawna, and Sanjana as part of our Operating System project. It focuses on core OS concepts like process management and scheduling in a simple and easy-to-understand way. Our goal was to learn, experiment, and explore new things while presenting OS features with a touch of fun, which inspired the name Coder Queens. The project is lightweight, easy to run, and designed for educational purposes.
