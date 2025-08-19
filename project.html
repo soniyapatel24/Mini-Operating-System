@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI OS</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Time -->
+    <div class="clock">
+        <h2 id="time">00.00.00</h2>
+    </div>
+
+    <div id="bar">
+        <button onclick="openApp('notes')"><i class="fa-solid fa-note-sticky" style="font-size:24px;"></i></button>
+        <button onclick="openApp('calculator')"><i class="fa-solid fa-calculator" style="font-size:24px;"></i></button>
+    </div>
+
+    <!-- Notes App -->
+    <div class="window" id="notes">
+        <div class="titlebar">
+            <span>Notes</span>
+            <div class="window-controls" >
+                <span class="min-btn" onclick="minimizeApp('notes')">_</span>
+                <span class="max-btn" onclick="maximizeApp('notes')">□</span>
+                <span class="close-btn" onclick="closeApp('notes')">X</span>
+            </div>
+        </div>
+        <div class="content">
+            <textarea id="notesContent" placeholder="Write something..."></textarea>
+        </div>
+    </div>
+    <div id="Sbar">
+        <button onclick="openApp('calculator')"></button>
+    </div>
+
+    <!-- Calculator App -->
+    <div class="window" id="calculator" style="width:300px; height: 350px; top:100px; left:200px;">
+        <div class="titlebar">
+            <span>Calculator</span>
+            <div class="window-controls">
+                <span class="min-btn" onclick="minimizeApp('calculator')">_</span>
+                <span class="max-btn" onclick="maximizeApp('calculator')">□</span>
+                <span class="close-btn" onclick="closeApp('calculator')">X</span>
+            </div>
+        </div>
+        <div class="container">
+            <input type="text" id="box" readonly>
+            <div class="calc-buttons">
+                <button onclick="clearBox()">AC</button>
+                <button value="DEL" onclick="box.value = box.value.toString().slice(0, -1)">DEL</button>
+                <button onclick="pressPercent()">%</button>
+                <button onclick="press('/')">/</button>
+                <button onclick="press('7')">7</button>
+                <button onclick="press('8')">8</button>
+                <button onclick="press('9')">9</button>
+                <button onclick="press('*')">*</button>
+                <button onclick="press('4')">4</button>
+                <button onclick="press('5')">5</button>
+                <button onclick="press('6')">6</button>
+                <button onclick="press('+')">+</button>
+                <button onclick="press('1')">1</button>
+                <button onclick="press('2')">2</button>
+                <button onclick="press('3')">3</button>
+                <button onclick="press('-')">-</button>
+                <button onclick="press('0')">0</button>
+                <button onclick="press('00')">00</button>
+                <button onclick="press('.')">.</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="project.js"></script>
+</body>
+
+</html>
